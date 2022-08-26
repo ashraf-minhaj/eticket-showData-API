@@ -1,0 +1,9 @@
+
+files/*
+!files/eticket-showdata.py
+output-files/*
+.DS_Store
+*.0_x5
+*.backup
+*.tfstate
+*.hcl
