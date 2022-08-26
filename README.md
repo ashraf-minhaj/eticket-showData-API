@@ -1,4 +1,4 @@
-# eticket-adminEntry-API
+# eticket-showData-API
 Store show details sent from admin panel (get request)
 
 ## Done
