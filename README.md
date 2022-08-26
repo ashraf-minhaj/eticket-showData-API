@@ -18,5 +18,7 @@ get method \shows
 
 ```
 {"statusCode": 200, 
-"body": "{\"date\": \"10-10-10\", \"shows\": [\"hawa\", \"letka\", \"poran\", \"valobasha dibi kina bol\"], 
-\"total_shows\": 4}"} ```
+"body": "{\"date\": \"10-10-10\", 
+\"shows\": [\"hawa\", \"letka\", \"poran\", \"valobasha dibi kina bol\"], 
+\"total_shows\": 4}"} 
+```
