@@ -15,6 +15,9 @@ resource "aws_api_gateway_method" "api_get_method" {
   resource_id   = "${aws_api_gateway_resource.api_resource.id}"
   http_method   = "GET"
   authorization = "NONE"
+  # request_parameters = {
+  #   "integration.request.querystring.date" = true
+  #   }
 }
 
 # Method Integration

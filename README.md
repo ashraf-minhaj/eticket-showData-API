@@ -14,11 +14,17 @@ get method \shows
 
 ### data (for testing purposes and reference):
 ##### Search list of shows by date
-* `wwww.myapi.com/shows` with `{"date":"10-10-10"}` date in body, returns list of movies -
+* `wwww.myapi.com/shows` with `date:10-10-10` date in query_string_parameter, returns list of movies -
 
 ```
 {"statusCode": 200, 
 "body": "{\"date\": \"10-10-10\", 
 \"shows\": [\"hawa\", \"letka\", \"poran\", \"valobasha dibi kina bol\"], 
 \"total_shows\": 4}"} 
+```
+
+### URL - Get data based on movie date
+
+```
+url/shows?date=10-10-10
 ```

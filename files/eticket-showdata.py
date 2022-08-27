@@ -12,7 +12,6 @@ Last coded: Aug 26 2022
 Prev coded: Aug 26 2022
 """
 
-from datetime import date
 import json
 import boto3
 import logging
@@ -52,13 +51,16 @@ def lambda_handler(event, context):
         try:
             if route == '/shows':
                 logger.info("Getting the data we need ")
-                body = event['body']
+                # body = event['body']
+                # logger.info(body)
+                query_string = event['queryStringParameters']
+                logger.info(query_string)
 
-                if body:
-                    data = json.loads(body)
-                    logger.info(f"Clean data = {data}, dtype = {type(data)}")
+                if query_string:
+                    # data = json.loads(query_string)
+                    # logger.info(f"Clean data = {data}, dtype = {type(data)}")
                     
-                    show_date = data['date']
+                    show_date = query_string['date']
                     # get shows from db table
                     logger.info(f"Performing Query for {partition_key} with {show_date}")
 
@@ -92,3 +94,5 @@ def lambda_handler(event, context):
 
 
 # {"date":"10-10-10"}
+
+# url/path?date="10-10-10"
